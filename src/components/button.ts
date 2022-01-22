@@ -9,8 +9,8 @@ class Button extends HTMLElement {
     const style = document.createElement("style");
     style.innerHTML = `
       button{
+      cursor:pointer;
       width:100%;
-      max-width:404px;
       height:87px;
       font-family:"Odibee Sans";
       font-weight:400;
@@ -20,6 +20,11 @@ class Button extends HTMLElement {
       border: solid 10px #001997;
       border-radius:10px;
       }
+
+      button:hover{
+        background-color:#0056ca
+      }
+
       `;
 
     button.textContent = this.textContent;
