@@ -27,7 +27,7 @@ function isGithubPages() {
 }
 
 export function initRoute(container: Element) {
-  const BASE_PATH = "/desafio-m5";
+  const BASE_PATH = "/rock-paper-scissor";
   function handleRoute(route) {
     for (let r of routes) {
       if (r.path.test(route)) {
