@@ -1,6 +1,6 @@
-const piedra = require("url:../../assets/piedra.png");
-const papel = require("url:../../assets/papel.png");
-const tijera = require("url:../../assets/tijera.png");
+const piedra = require("url:../assets/piedra.png");
+const papel = require("url:../assets/papel.png");
+const tijera = require("url:../assets/tijera.png");
 class Moves extends HTMLElement {
   shadow: ShadowRoot = this.attachShadow({ mode: "open" });
   constructor() {
@@ -23,7 +23,6 @@ class Moves extends HTMLElement {
   }
 
   render() {
-    // const shadow: any = this.attachShadow({ mode: "open" });
     this.classList.add("move");
     const move = this.getAttribute("move");
     const div = document.createElement("div");
