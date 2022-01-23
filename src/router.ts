@@ -1,5 +1,7 @@
 import { initWelcomePage } from "./pages/welcome";
 import { initInstructionsPage } from "./pages/instructions";
+import { initPlayPage } from "./pages/play";
+import { initResultsPage } from "./pages/results";
 
 const routes = [
   {
@@ -9,6 +11,14 @@ const routes = [
   {
     path: /\/instructions/,
     component: initInstructionsPage,
+  },
+  {
+    path: /\/play/,
+    component: initPlayPage,
+  },
+  {
+    path: /\/results/,
+    component: initResultsPage,
   },
 ];
 
