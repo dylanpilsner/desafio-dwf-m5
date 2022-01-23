@@ -1,1 +1,1 @@
-https://dylanpilsner.github.io/rock-paper-scissor/welcome
+https://dylanpilsner.github.io/rock-paper-scissor/
