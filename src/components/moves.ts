@@ -1,3 +1,6 @@
+const piedra = require("url:../../assets/piedra.png");
+const papel = require("url:../../assets/papel.png");
+const tijera = require("url:../../assets/tijera.png");
 class Moves extends HTMLElement {
   shadow: ShadowRoot = this.attachShadow({ mode: "open" });
   constructor() {
@@ -10,17 +13,11 @@ class Moves extends HTMLElement {
   }
 
   returnImage(theMove) {
-    const piedra = require("url:../images/piedra.png");
-    const papel = require("url:../images/papel.png");
-    const tijera = require("url:../images/tijera.png");
     if (theMove == "piedra") {
-      this.setAttribute("id", "1");
       return piedra;
     } else if (theMove == "papel") {
-      this.setAttribute("id", "2");
       return papel;
     } else {
-      this.setAttribute("id", "3");
       return tijera;
     }
   }

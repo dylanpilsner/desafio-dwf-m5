@@ -1,9 +1,9 @@
 import { state } from "../state";
 
 export function initResultsPage(param) {
-  const win = require("url:../images/win.png");
-  const draw = require("url:../images/draw.svg");
-  const lose = require("url:../images/lose.png");
+  const win = require("url:../../assets/win.png");
+  const draw = require("url:../../assets/draw.svg");
+  const lose = require("url:../../assets/lose.png");
   const div = document.createElement("div");
   const style = document.createElement("style");
   const currentState = state.getState().currentGame;

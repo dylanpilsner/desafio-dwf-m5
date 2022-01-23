@@ -44,6 +44,10 @@ export function initRoute(container: Element) {
     handleRoute(completePath);
   }
 
+  if (location.host.includes("github.io")) {
+    goTo("/welcome");
+  }
+
   if (location.pathname == "/") {
     goTo("/welcome");
   } else {

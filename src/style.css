@@ -5,7 +5,7 @@
 body {
   margin: 0;
   font-family: "Odibee Sans";
-  background-image: url("./images/fondo.png");
+  background-image: url("../assets/fondo.png");
 }
 
 .root {
