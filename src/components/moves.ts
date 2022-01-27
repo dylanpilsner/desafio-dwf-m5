@@ -27,6 +27,7 @@ class Moves extends HTMLElement {
     const move = this.getAttribute("move");
     const div = document.createElement("div");
     const style = document.createElement("style");
+    const playState = this.getAttribute("state") || "out-of-game";
     style.innerHTML = `
     
     .hand{
@@ -36,6 +37,10 @@ class Moves extends HTMLElement {
 
     .hand.result{
       height:200px;
+    }
+
+    .chosen{
+      transform:translateY(-30px);
     }
 
     @media (min-width:769px){
@@ -50,7 +55,7 @@ class Moves extends HTMLElement {
   
     @media (min-width:769px){
       .hand{
-       transition: 3s ease-in-out all;
+       transition: 1s ease-in-out all;
         height:initial;
       }
       .hand:hover{
@@ -59,15 +64,22 @@ class Moves extends HTMLElement {
     }
       `;
 
-    div.innerHTML = `<img class="hand" src="${this.returnImage(move)}"/>`;
-    const state = this.getAttribute("state");
-    const hand = div.querySelector(".hand");
-
-    hand.classList.add(state);
-    console.log(piedra);
+    div.innerHTML = `<img class="hand ${playState}" src="${this.returnImage(
+      move
+    )}"/>`;
 
     this.shadow.appendChild(div);
     this.shadow.appendChild(style);
+
+    const handState = div.querySelector(".play");
+    const hand = div.querySelector(".hand");
+
+    // if (handState) {
+    //   handState.addEventListener("click", (e) => {
+    //     const target = e.target as any;
+    //     target.classList.add("chosen");
+    //   });
+    // }
   }
 }
 customElements.define("the-move", Moves);

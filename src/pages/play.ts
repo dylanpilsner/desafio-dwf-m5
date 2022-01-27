@@ -50,9 +50,9 @@ export function initPlayPage(param) {
   <div class="countdown">3</div>
   </div>
   <div class="moves-container">
-  <the-move move="tijera"></the-move>
-  <the-move move="piedra"></the-move>
-  <the-move move="papel"></the-move>
+  <the-move state="play" move="tijera"></the-move>
+  <the-move state="play" move="piedra"></the-move>
+  <the-move state="play" move="papel"></the-move>
   </div>
   `;
 
@@ -69,6 +69,19 @@ export function initPlayPage(param) {
     });
   });
 
+  function test() {
+    const manoElegida = div.querySelector("the-move");
+    const clasesDeMano = manoElegida.getAttribute("class");
+    console.log(manoElegida);
+
+    manoElegida.addEventListener("click", (e) => {
+      const target = e.target as any;
+      console.log(target);
+
+      target.classList.add("chosen");
+    });
+  }
+  // test();
   const intervalId = setInterval(() => {
     const countdownContainer: any = div.querySelector(".countdown-container");
     const currentGame = state.getState().currentGame;
@@ -77,9 +90,9 @@ export function initPlayPage(param) {
     if (counter < 0) {
       clearInterval(intervalId);
       countdownContainer.style.display = "none";
-      if (currentGame.myPlay == "") {
-        param.goTo("/instructions");
-      } else param.goTo("/results");
+      // if (currentGame.myPlay == "") {
+      //   param.goTo("/instructions");
+      // } else param.goTo("/results");
     }
   }, 1000);
 

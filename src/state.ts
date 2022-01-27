@@ -21,9 +21,12 @@ const state = {
 
   init() {
     const score = JSON.parse(localStorage.getItem("saved-score"));
-    score ? this.setState(score) : (this.data.score = this.data.score);
     const result = JSON.parse(localStorage.getItem("saved-result"));
-    this.setResult(result);
+
+    if (score && result) {
+      this.setState(score);
+      this.setResult(result);
+    }
   },
 
   getState() {

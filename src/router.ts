@@ -52,5 +52,4 @@ export function initRoute(container: Element) {
     handleRoute(location.pathname);
   };
   handleRoute(location.pathname);
-  console.log(location.pathname);
 }
