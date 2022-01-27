@@ -48,14 +48,9 @@ export function initRoute(container: Element) {
     goTo("/welcome");
   }
 
-  if (location.pathname == "/") {
-    goTo("/welcome");
-  } else {
-    handleRoute(location.pathname);
-  }
-
   window.onpopstate = () => {
     handleRoute(location.pathname);
   };
   handleRoute(location.pathname);
+  console.log(location.pathname);
 }

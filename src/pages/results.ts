@@ -122,7 +122,7 @@ export function initResultsPage(param) {
   } state="result" style="text-align:center;"></the-move>
   </div>
   <div class="result-container">
-  <img class="result" src=${chooseImage()})} />
+  <img class="result" src="${chooseImage()}")} />
   <div class="score-container">
   <h3 class="score-title">Score</h3>
   <h4 class="vos">Vos:<span class="score">${currentScore.myScore}</span></h4>

@@ -59,11 +59,12 @@ class Moves extends HTMLElement {
     }
       `;
 
-    div.innerHTML = `<img class="hand" src=${this.returnImage(move)}/>`;
+    div.innerHTML = `<img class="hand" src="${this.returnImage(move)}"/>`;
     const state = this.getAttribute("state");
     const hand = div.querySelector(".hand");
 
     hand.classList.add(state);
+    console.log(piedra);
 
     this.shadow.appendChild(div);
     this.shadow.appendChild(style);
