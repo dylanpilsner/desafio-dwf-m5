@@ -70,7 +70,7 @@ class Moves extends HTMLElement {
 
     this.shadow.appendChild(div);
     this.shadow.appendChild(style);
-
+    this.classList.add(move);
     const handState = div.querySelector(".play");
     const hand = div.querySelector(".hand");
 

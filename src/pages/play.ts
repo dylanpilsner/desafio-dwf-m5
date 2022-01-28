@@ -42,7 +42,20 @@ export function initPlayPage(param) {
     .moves-container {
       gap: 45px;
     }
-  }
+
+    [play]{
+    }
+
+    .chosen{
+      transition:0.5s ease all;
+      transform:translateY(-30px);
+    }
+
+    .not-chosen{
+      transition:0.5s ease all;
+      opacity:50%;
+    }
+  
   `;
 
   div.innerHTML = `
@@ -59,14 +72,30 @@ export function initPlayPage(param) {
   const move = div.querySelectorAll("the-move");
   move.forEach((i) => {
     i.addEventListener("click", (e) => {
+      const piedra = div.querySelector(".piedra");
+      const papel = div.querySelector(".papel");
+      const tijera = div.querySelector(".tijera");
       const target = e.target as any;
       const move = target.getAttribute("move");
-      const currentGame = state.getState().data.currentGame;
       const randomNumber = Math.floor(Math.random() * 3);
       const botMoves = ["piedra", "papel", "tijera"];
       const randomMove: any = botMoves[randomNumber];
       state.setMove(move, randomMove);
       state.winner();
+
+      if (currentGame.myPlay == "piedra") {
+        piedra.classList.add("chosen");
+        papel.classList.add("not-chosen");
+        tijera.classList.add("not-chosen");
+      } else if (currentGame.myPlay == "papel") {
+        papel.classList.add("chosen");
+        piedra.classList.add("not-chosen");
+        tijera.classList.add("not-chosen");
+      } else if (currentGame.myPlay == "tijera") {
+        tijera.classList.add("chosen");
+        piedra.classList.add("not-chosen");
+        piedra.classList.add("not-chosen");
+      }
     });
   });
 
