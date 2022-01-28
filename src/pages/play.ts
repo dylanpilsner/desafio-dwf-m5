@@ -61,6 +61,7 @@ export function initPlayPage(param) {
     i.addEventListener("click", (e) => {
       const target = e.target as any;
       const move = target.getAttribute("move");
+      const currentGame = state.getState().data.currentGame;
       const randomNumber = Math.floor(Math.random() * 3);
       const botMoves = ["piedra", "papel", "tijera"];
       const randomMove: any = botMoves[randomNumber];
@@ -69,19 +70,6 @@ export function initPlayPage(param) {
     });
   });
 
-  function test() {
-    const manoElegida = div.querySelector("the-move");
-    const clasesDeMano = manoElegida.getAttribute("class");
-    console.log(manoElegida);
-
-    manoElegida.addEventListener("click", (e) => {
-      const target = e.target as any;
-      console.log(target);
-
-      target.classList.add("chosen");
-    });
-  }
-  // test();
   const intervalId = setInterval(() => {
     const countdownContainer: any = div.querySelector(".countdown-container");
     const currentGame = state.getState().currentGame;
@@ -90,9 +78,9 @@ export function initPlayPage(param) {
     if (counter < 0) {
       clearInterval(intervalId);
       countdownContainer.style.display = "none";
-      // if (currentGame.myPlay == "") {
-      //   param.goTo("/instructions");
-      // } else param.goTo("/results");
+      if (currentGame.myPlay == "") {
+        param.goTo("/instructions");
+      } else param.goTo("/results");
     }
   }, 1000);
 
