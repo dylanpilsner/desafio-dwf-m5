@@ -12,7 +12,7 @@ export function initPlayPage(param) {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
   }
   
@@ -29,10 +29,7 @@ export function initPlayPage(param) {
   }
   
   .moves-container {
-    position: absolute;
-    bottom: 0;
     display: grid;
-    /* height: 100%; */
     grid-template-columns: 1fr 1fr 1fr;
     align-items: end;
     gap: 10px;

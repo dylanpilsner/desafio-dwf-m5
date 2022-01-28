@@ -14,7 +14,6 @@ export function initWelcomePage(param) {
 
   .start-button {
     width: 100%;
-    height:100%;
     max-width: 404px;
     display:grid;
     align-items:center;
@@ -32,13 +31,13 @@ my-button{
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
   }
   
   .moves-container {
     display: grid;
-    height: 100%;
+    /* height: 100%; */
     grid-template-columns: 1fr 1fr 1fr;
     align-items: end;
     gap: 10px;
