@@ -4,7 +4,7 @@ export function initWelcomePage(param) {
   div.classList.add("main-container");
   style.innerHTML = `
   .title {
-    margin: 40px 0 0;
+    margin: 70px 0 0;
     font-size: 80px;
     color: #009048;
     letter-spacing: 10px;

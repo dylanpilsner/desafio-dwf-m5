@@ -29,7 +29,7 @@ export function initInstructionsPage(param) {
 }
 
 .instructions {
-  margin: 40px 0 0;
+  margin: 70px 0 0;
   font-size: 50px;
   line-height: 60px;
   text-align: center;

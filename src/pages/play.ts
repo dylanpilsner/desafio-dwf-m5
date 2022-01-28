@@ -19,7 +19,7 @@ export function initPlayPage(param) {
   .countdown-container {
     font-family: "Oswald";
     font-size: 100px;
-    margin-bottom: 200px;
+    margin-top: 180px;
   }
   
   @media (min-width: 769px) {
@@ -88,7 +88,7 @@ export function initPlayPage(param) {
       } else if (currentGame.myPlay == "tijera") {
         tijera.classList.add("chosen");
         piedra.classList.add("not-chosen");
-        piedra.classList.add("not-chosen");
+        papel.classList.add("not-chosen");
       }
     });
   });
