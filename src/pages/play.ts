@@ -42,10 +42,7 @@ export function initPlayPage(param) {
     .moves-container {
       gap: 45px;
     }
-
-    [play]{
-    }
-
+  }
     .chosen{
       transition:0.5s ease all;
       transform:translateY(-30px);

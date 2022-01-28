@@ -39,10 +39,6 @@ class Moves extends HTMLElement {
       height:200px;
     }
 
-    .chosen{
-      transform:translateY(-30px);
-    }
-
     @media (min-width:769px){
       .hand.result{
         transition:initial;
