@@ -35,8 +35,10 @@ const state = {
 
   setMove(myMove: play, botMove: play) {
     const currentState = this.getState();
-    currentState.currentGame.myPlay = myMove;
-    currentState.currentGame.botPlay = botMove;
+    if (currentState.currentGame.myPlay == "") {
+      currentState.currentGame.myPlay = myMove;
+      currentState.currentGame.botPlay = botMove;
+    }
   },
 
   winner() {

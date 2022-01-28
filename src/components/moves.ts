@@ -73,13 +73,6 @@ class Moves extends HTMLElement {
     this.classList.add(move);
     const handState = div.querySelector(".play");
     const hand = div.querySelector(".hand");
-
-    // if (handState) {
-    //   handState.addEventListener("click", (e) => {
-    //     const target = e.target as any;
-    //     target.classList.add("chosen");
-    //   });
-    // }
   }
 }
 customElements.define("the-move", Moves);
