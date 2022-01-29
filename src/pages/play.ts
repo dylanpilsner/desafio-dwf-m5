@@ -19,7 +19,10 @@ export function initPlayPage(param) {
   .countdown-container {
     font-family: "Oswald";
     font-size: 100px;
-    margin-top: 180px;
+    margin:0;
+    height:100%;
+    display:flex;
+    align-items:center;
   }
   
   @media (min-width: 769px) {

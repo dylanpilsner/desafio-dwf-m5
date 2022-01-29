@@ -4,13 +4,22 @@ export function initWelcomePage(param) {
   div.classList.add("main-container");
   style.innerHTML = `
   .title {
-    margin: 70px 0 0;
+    margin: 40px 0 0;
     font-size: 80px;
     color: #009048;
     letter-spacing: 10px;
   }
   
-  
+  @media(min-width:769px){
+    .title{
+    margin: 10px 0 0;
+   }
+  }
+  @media(min-width:1500px){
+    .title{
+    margin: 70px 0 0;
+   }
+  }
 
   .start-button {
     width: 100%;
@@ -18,15 +27,6 @@ export function initWelcomePage(param) {
     display:grid;
     align-items:center;
   }
-
-my-button{
-}
-
-  @media(min-width:769px){
-    .start-button{
-    }
-  }
-  
   .main-container {
     height: 100vh;
     display: flex;
@@ -34,7 +34,6 @@ my-button{
     justify-content: space-between;
     align-items: center;
   }
-  
   .moves-container {
     display: grid;
     /* height: 100%; */

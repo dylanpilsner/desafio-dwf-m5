@@ -26,10 +26,22 @@ export function initInstructionsPage(param) {
 
 .instructions-container {
   max-width: 317px;
+  margin: 40px 0 0;
+}
+
+@media (min-width: 769px) {
+  .instructions-container {
+    margin: 10px 0 0;
+  }
+}
+@media (min-width: 1500px) {
+  .instructions-container {
+    margin: 70px 0 0;
+  }
 }
 
 .instructions {
-  margin: 70px 0 0;
+  margin:0;
   font-size: 50px;
   line-height: 60px;
   text-align: center;
