@@ -80,7 +80,7 @@ export function initInstructionsPage(param) {
 
   div.appendChild(style);
 
-  const startButton = div.querySelector(".start-button");
+  const startButton = div.querySelector(".start-button")!;
   startButton.addEventListener("click", (e) => {
     e.preventDefault();
     param.goTo("/play");

@@ -69,9 +69,9 @@ export function initPlayPage(param) {
   const move = div.querySelectorAll("the-move");
   move.forEach((i) => {
     i.addEventListener("click", (e) => {
-      const piedra = div.querySelector(".piedra");
-      const papel = div.querySelector(".papel");
-      const tijera = div.querySelector(".tijera");
+      const piedra = div.querySelector(".piedra")!;
+      const papel = div.querySelector(".papel")!;
+      const tijera = div.querySelector(".tijera")!;
       const target = e.target as any;
       const move = target.getAttribute("move");
       const randomNumber = Math.floor(Math.random() * 3);

@@ -65,7 +65,7 @@ export function initWelcomePage(param) {
 </div>
   `;
 
-  const button = div.querySelector(".start-button");
+  const button = div.querySelector(".start-button")!;
 
   button.addEventListener("click", (e) => {
     param.goTo("/instructions");

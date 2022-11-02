@@ -24,7 +24,7 @@ class Moves extends HTMLElement {
 
   render() {
     this.classList.add("move");
-    const move = this.getAttribute("move");
+    const move = this.getAttribute("move")!;
     const div = document.createElement("div");
     const style = document.createElement("style");
     const playState = this.getAttribute("state") || "out-of-game";
